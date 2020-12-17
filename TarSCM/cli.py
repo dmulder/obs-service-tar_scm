@@ -184,6 +184,9 @@ class Cli():
         parser.add_argument('--maintainers-asc', default = False,
                             help='File which contains maintainers pubkeys. '
                                  '(only used with \'--latest-signed-*\')')
+        parser.add_argument('--describe-candidates', default=10,
+                            help='Choose the number of candidates to be '
+                                 'considered to describe the git input')
 
         self.verify_args(parser.parse_args(options))
 
